@@ -1,0 +1,9 @@
+[submodule "wordpress"]
+	path = wordpress
+	url = https://github.com/WordPress/WordPress.git
+[submodule "content/mu-plugins"]
+	path = content/mu-plugins
+	url = https://github.com/oldtownmedia/evans.git
+[submodule "content/themes/skeleton"]
+	path = content/themes/skeleton
+	url = https://github.com/oldtownmedia/skeleton
