@@ -97,9 +97,7 @@ define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
 define( 'WP_CONTENT_URL', WP_HOME . '/content' );
 
 /* Security overrides */
-add_filter( 'xmlrpc_enabled', '__return_false' );	// Disable xmlrpc
 define( 'DISALLOW_FILE_EDIT', true );				// Turn off file editors
-
 
 /* That's all, stop editing! Happy blogging. */
 
