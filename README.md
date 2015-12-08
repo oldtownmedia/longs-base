@@ -12,3 +12,10 @@ cd my-folder
 sh install.sh
 git push -u origin master
 ````
+
+## Requirements
+
+Built to be run on Mac OS X.
+
+`mysql`
+`git`
