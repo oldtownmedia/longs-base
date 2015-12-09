@@ -84,8 +84,12 @@ git add .
 git commit -am "Initial Commit"
 echo "\033[32m+ Adding all the new files to git for you for you\033[0m"
 
+# Set proper permissions
+chmod 755 content
+
 # Clean Up
 rm /tmp/wp.keys
+rm README.md
 rm wp-config.php.tmp
 rm wp-config-local.php.tmp
 
