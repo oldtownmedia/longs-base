@@ -6,31 +6,29 @@ echo "|     \033[1mWP Build Script\033[0m     |";
 echo "|-------------------------|"
 echo "  "
 
-echo "\033[33mGit repo URL to write to:* \033[0m"
-read git_repo
+# Get our necessary variables
+read -e -p "? Git repo URL to write to:* " git_repo
 export git_repo
 
-echo "\033[33mNew theme path:* \033[0m";
-read theme_path
+read -e -p "? New theme path:* " theme_path
 export theme_path
 
-echo "\033[33mSite URL:* \033[0m"
-read site_url
+read -e -p "? Site URL:* " site_url
 export site_url
 
 # DB Variables
-read -e -p "MySQL Host: " mysqlhost
+read -e -p "? MySQL Host: [localhost] " mysqlhost
 [ -z "${mysqlhost}" ] && mysqlhost='localhost'
 export mysqlhost
 
-read -e -p "MySQL DB Name:* " mysqldb
+read -e -p "? MySQL DB Name:* " mysqldb
 export mysqldb
 
-read -e -p "MySQL DB User: " mysqluser
+read -e -p "? MySQL DB User: [root] " mysqluser
 [ -z "${mysqluser}" ] && mysqluser='root'
 export mysqluser
 
-read -e -p "MySQL Password: " mysqlpass
+read -e -p "? MySQL Password:* " mysqlpass
 [ -z "${mysqlpass}" ] && mysqlpass='root'
 export mysqlpass
 
