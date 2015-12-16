@@ -32,10 +32,17 @@ read -e -p "? MySQL Password:* " mysqlpass
 [ -z "${mysqlpass}" ] && mysqlpass='root'
 export mysqlpass
 
+# Update submodules to the latest so we know what we're working with
+cd content/mu-plugins
+git pull origin master
+cd ../themes/skeleton
+git pull origin master
+cd ../../../
+echo "\033[32m+ Updating submodules\033[0m";
 
 # Delete reference to submodules that now need to be included as repo files
 git rm --cached content/mu-plugins
-git rm --cached content/themes
+git rm --cached content/themes/skeleton
 echo "\033[91- mdelete reference to submodule HEAD\033[0m"
 
 rm -rf .gitmodules
