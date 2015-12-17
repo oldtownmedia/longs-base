@@ -1,5 +1,8 @@
-# ignore everything in the root except the "wp-content" directory.
+# ignore everything in wordpress/
 wordpress/*
+
+# ignore everything in PSDs/
+PSDs
 
 # ignore all files starting with .
 .*

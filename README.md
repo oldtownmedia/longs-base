@@ -9,7 +9,7 @@ Using this setup tool is actually pretty easy. Checkout the repo, run install.sh
 ````sh
 git clone --recursive https://github.com/oldtownmedia/longs-base my-folder
 cd my-folder
-sh install.sh
+sh build.sh
 git push -u origin master
 ````
 

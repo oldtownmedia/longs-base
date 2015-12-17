@@ -35,13 +35,17 @@ export mysqlpass
 # Update submodules to the latest so we know what we're working with
 cd content/mu-plugins
 git pull origin master
-cd ../themes/skeleton
+cd assets/metabox
+git pull origin master
+cd ../../../themes/skeleton
 git pull origin master
 cd ../../../
 echo "\033[32m+ Updating submodules\033[0m";
 
 # Delete reference to submodules that now need to be included as repo files
 git rm --cached content/mu-plugins
+git rm --cached content/mu-plugins/assets/metabox
+rm content/mu-plugins/.gitmodules
 git rm --cached content/themes/skeleton
 echo "\033[91- mdelete reference to submodule HEAD\033[0m"
 
@@ -74,6 +78,7 @@ sed -i.tmp "s/msql_password/"$mysqlpass"/" wp-config-local.php
 sed -i.tmp "s,LOCALURL,"$site_url",g" wp-config-local.php
 
 # Rename the theme folder
+rm content/themes/skeleton/README.md
 mv content/themes/skeleton content/themes/$theme_path
 echo "\033[32m| Renaming the theme folder to $theme_path\033[0m";
 
@@ -84,11 +89,6 @@ git remote rm origin
 git remote add origin $git_repo
 echo "\033[32m+ Replacing git origin with new path\033[0m"
 
-# Handle new git situation
-git add .
-git commit -am "Initial Commit"
-echo "\033[32m+ Adding all the new files to git for you for you\033[0m"
-
 # Set proper permissions
 chmod 755 content
 
@@ -97,5 +97,10 @@ rm /tmp/wp.keys
 rm README.md
 rm wp-config.php.tmp
 rm wp-config-local.php.tmp
+
+# Handle new git situation
+git add .
+git commit -am "Initial Commit"
+echo "\033[32m+ Adding all the new files to git for you for you\033[0m"
 
 echo "\033[32m** All done! **\033[0m";
