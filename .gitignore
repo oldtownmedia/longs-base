@@ -15,6 +15,9 @@ PSDs
 # track .editorconfig file (i.e. do NOT ignore it)
 !.editorconfig
 
+# track scrutinizer config file file (i.e. do NOT ignore it)
+!.scrutinizer.yml
+
 # ignore all files that start with ~
 ~*
 

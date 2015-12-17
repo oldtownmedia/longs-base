@@ -1,0 +1,5 @@
+filter:
+    excluded_paths:
+        - content/mu-plugins/site-setup/includes/auto-install-plugins.php
+        - content/mu-plugins/site-setup/includes/class-tgm-plugin-activation.php
+        - content/mu-plugins/assets/metabox/*
