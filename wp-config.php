@@ -43,7 +43,7 @@ if ( DEV_ENVIRONMENT === 'local' ) {
 } elseif ( DEV_ENVIRONMENT === 'staging' ) {
 
 	// Include our config
-	include( dirname( __FILE__ ) . '/wp-config-local.php' );
+	include( dirname( __FILE__ ) . '/wp-config-staging.php' );
 
 	define( 'OTM_DEV', false );
 	define( 'WP_DEBUG', true );		// Turn debug statements on
