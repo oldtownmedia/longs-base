@@ -1,5 +1,20 @@
-# ignore everything in wordpress/
-wordpress/*
+# ignore everything in root/
+license.txt
+readme.html
+wp-activate.php
+wp-admin/
+wp-blog-header.php
+wp-comments-post.php
+wp-cron.php
+wp-includes/
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
 
 # ignore everything in PSDs/
 PSDs
@@ -9,7 +24,6 @@ PSDs
 
 # track this file .gitignore & other git files
 !.gitignore
-!.gitignore-dev
 !.gitmodules
 !.gitmodules-dev
 
@@ -49,17 +63,18 @@ Thumbs.db
 *.tar
 *.zip
 
-# ignore everything in the "content" directory, except:
-content/*
-content/plugins/*
-!content/mu-plugins/
-!content/themes/
-!content/plugins/
-!content/plugins/index.php
+# ignore everything in the "wp-content" directory, except:
+wp-content/uploads*
+wp-content/upgrade*
+wp-content/plugins/*
+!wp-content/mu-plugins/*
+!wp-content/themes/*
+!wp-content/plugins/
+!wp-content/plugins/index.php
 
 
 # ignore specific themes
-content/themes/twenty*/
+wp-content/themes/twenty*/
 
 # ignore node/grunt dependency directories
 node_modules/

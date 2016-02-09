@@ -86,10 +86,15 @@ mv -f content wordpress
 rm -rf wordpress/wp-content
 mv wordpress/content wordpress/wp-content
 
-# Move /wordpress contents into root
+# Move /wordpress contents into root & clean up
 cd wordpress
 mv * ../
 cd ../
+rm -rf wordpress
+
+# Swap out our gitignore file for the development one
+rm .gitignore
+mv .gitignore-dev .gitignore
 
 # Remove old git origin
 git remote rm origin
@@ -112,4 +117,6 @@ git add .
 git commit -am "Initial Commit"
 echo "\033[32m+ Adding all the new files to git for you for you\033[0m"
 
+echo "\033[32m***************\033[0m";
 echo "\033[32m** All done! **\033[0m";
+echo "\033[32m***************\033[0m";
