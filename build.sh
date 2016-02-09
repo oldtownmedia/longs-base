@@ -50,11 +50,10 @@ git rm --cached content/themes/skeleton
 echo "\033[91- mdelete reference to submodule HEAD\033[0m"
 
 rm -rf .gitmodules
-mv .gitmodules-dev .gitmodules
-echo "+ Replacing original gitmodules"
 
 rm -rf content/mu-plugins/.git
 rm -rf content/themes/skeleton/.git
+rm -rf wordpress/.git
 echo "\033[91m- Deleting git files in prior submodules\033[0m"
 
 # Create the databse
@@ -82,6 +81,16 @@ rm content/themes/skeleton/README.md
 mv content/themes/skeleton content/themes/$theme_path
 echo "\033[32m| Renaming the theme folder to $theme_path\033[0m";
 
+# Move /content into /wordpress
+mv -f content wordpress
+rm -rf wordpress/wp-content
+mv wordpress/content wordpress/wp-content
+
+# Move /wordpress contents into root
+cd wordpress
+mv * ../
+cd ../
+
 # Remove old git origin
 git remote rm origin
 
@@ -90,7 +99,7 @@ git remote add origin $git_repo
 echo "\033[32m+ Replacing git origin with new path\033[0m"
 
 # Set proper permissions
-chmod 755 content
+chmod 755 wp-content
 
 # Clean Up
 rm /tmp/wp.keys

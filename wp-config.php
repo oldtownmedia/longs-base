@@ -92,10 +92,6 @@ define('NONCE_SALT',       '}S*iYh;2*AEB^)T#qRQF+WpR3*j|p<FBy3/R|M1tZ2,qQxZ<MX2N
  */
 $table_prefix  = 'wp_';
 
-/* Define custom content directory */
-define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-define( 'WP_CONTENT_URL', WP_HOME . '/content' );
-
 /* Security overrides */
 define( 'DISALLOW_FILE_EDIT', true );				// Turn off file editors
 
