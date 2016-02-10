@@ -45,11 +45,12 @@ echo "\033[32m+ Updating submodules\033[0m";
 # Delete reference to submodules that now need to be included as repo files
 git rm --cached content/mu-plugins
 git rm --cached content/mu-plugins/assets/metabox
+rm content/mu-plugins/assets/metabox/.git
 rm content/mu-plugins/.gitmodules
 git rm --cached content/themes/skeleton
 echo "\033[91- mdelete reference to submodule HEAD\033[0m"
 
-rm -rf .gitmodules
+rm .gitmodules
 
 rm -rf content/mu-plugins/.git
 rm -rf content/themes/skeleton/.git

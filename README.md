@@ -18,4 +18,5 @@ git push -u origin master
 Built to be run on Mac OS X.
 
 `mysql`
+`wget`
 `git`
