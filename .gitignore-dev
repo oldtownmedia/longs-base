@@ -1,10 +1,12 @@
 # ignore everything in root/
+index.php
 license.txt
 readme.html
 wp-activate.php
 wp-admin/
 wp-blog-header.php
 wp-comments-post.php
+wp-config-sample.php
 wp-cron.php
 wp-includes/
 wp-links-opml.php
@@ -39,6 +41,8 @@ PSDs
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
+**/.DS_Store
+.DS_Store
 
 # ignore log files and databases
 *.log

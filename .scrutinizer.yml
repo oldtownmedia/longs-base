@@ -3,3 +3,4 @@ filter:
         - wp-content/mu-plugins/site-setup/includes/auto-install-plugins.php
         - wp-content/mu-plugins/site-setup/includes/class-tgm-plugin-activation.php
         - wp-content/mu-plugins/assets/metabox/*
+        - wp-content/mu-plugins/assets/tests/*

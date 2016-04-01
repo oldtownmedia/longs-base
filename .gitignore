@@ -25,6 +25,8 @@ PSDs
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
+**/.DS_Store
+.DS_Store
 
 # ignore log files and databases
 *.log

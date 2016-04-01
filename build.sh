@@ -54,7 +54,7 @@ rm .gitmodules
 
 rm -rf content/mu-plugins/.git
 rm -rf content/themes/skeleton/.git
-rm -rf wordpress/.git
+rm -rf wordpress/.gi
 echo "\033[91m- Deleting git files in prior submodules\033[0m"
 
 # Create the databse
@@ -93,9 +93,12 @@ mv * ../
 cd ../
 rm -rf wordpress
 
-# Swap out our gitignore file for the development one
+# Swap out our original gitignore file for the development one
 rm .gitignore
 mv .gitignore-dev .gitignore
+
+# Remove any DS_Store files that might have snuck in
+git rm -f *.DS_Store
 
 # Remove old git origin
 git remote rm origin
