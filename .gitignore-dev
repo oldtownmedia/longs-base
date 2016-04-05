@@ -1,4 +1,5 @@
 # ignore everything in root/
+build.sh
 index.php
 license.txt
 readme.html
