@@ -1,6 +1,6 @@
 # ignore everything in root/
 build.sh
-index.php
+/index.php
 license.txt
 readme.html
 wp-activate.php
