@@ -74,9 +74,6 @@ sed -i.tmp "s/msql_dbname/"$mysqldb"/" wp-config-local.php
 sed -i.tmp "s/msql_user/"$mysqluser"/" wp-config-local.php
 sed -i.tmp "s/msql_password/"$mysqlpass"/" wp-config-local.php
 
-# Replace site URL with new
-sed -i.tmp "s,LOCALURL,"$site_url",g" wp-config-local.php
-
 # Rename the theme folder
 rm content/themes/skeleton/README.md
 mv content/themes/skeleton content/themes/$theme_path
